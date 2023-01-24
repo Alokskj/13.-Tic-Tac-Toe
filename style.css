@@ -8,12 +8,13 @@
 /* navbar start */
 
 nav {
-  background-color: #191930;
+  background-color: #463def;
   color: white;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding:0 4px;
 }
 
 nav li {
@@ -25,9 +26,7 @@ nav li {
 }
 
 
-.fa-sun {
-  font-size: 1px;
-}
+/* toggle dark mode start  */
 .content {
   display: flex;
   flex-direction: row;
@@ -44,7 +43,7 @@ nav li {
   display: block;
   height: 20px;
   width: 44px;
-  background: #303030;
+  background: #747070;
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -83,7 +82,25 @@ nav li {
   display: none;
 }
 
+/* toggle dark mode end  */
+
 /* navbar end */
+
+ /* stats start  */
+
+ .stats{
+
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: "Baloo Bhaina 2", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+ }
+
+ /* stats end */
 
 /* main container start */
 
@@ -93,7 +110,7 @@ nav li {
   justify-content: center;
   margin: 40px;
 }
-
+/* game container start  */
 .game-container {
   display: grid;
   grid-template-columns: repeat(3, 20vh);
@@ -114,7 +131,7 @@ nav li {
 .box:hover {
   color: #6c88e4;
   cursor: pointer;
-  background-color: rgba(60, 57, 243, 0.096);
+  background-color: rgba(220, 219, 245, 0.096);
 }
 
 .boxtext {
@@ -187,7 +204,7 @@ nav li {
 
 
 
-
+/* game container end  */
 
 /* info container start */
 
@@ -243,6 +260,8 @@ nav li {
 }
 
 
+
+
 .reset {
     margin: 5px 10px ;
   background: #5e5df0;
@@ -284,16 +303,9 @@ nav li {
     
 }
 
-.line{
-    background-color: black;
-    height: 3px;
-    width: 0;
-    position: absolute;
-    background-color: #4b4bf7;
-    transition: width 1s ease-in-out;
-}
+/* info end  */
 
-
+/* footer start  */
 .footer-title{
     position: absolute;
     bottom: 10px;
@@ -307,7 +319,9 @@ nav li {
    
 }
 
+/* footer end  */
 
+/* media queries start  */
 
 @media screen and (max-width: 950px)
 {
@@ -334,27 +348,38 @@ nav li {
     }
 }
 
+/* media queries end */
+
 
 
 /* night mode  */
 
 .night {
-    background-color: #000000;
+    background-color: #000000f3;
     color: rgb(253, 210, 15);
     
   }
-  
   .night-title{
-      color: rgb(253, 210, 15);
-      text-shadow: 1px 1px rgba(245, 201, 8, 0.637);
-  
+    color: rgb(253, 210, 15);
+    text-shadow: 1px 1px rgba(245, 202, 8, 0.177);
+    
+  }
+  .night-nav{
+    background-color: rgb(253, 210, 15);
+    color: #000000;
   }
   
   .night-border{
       border: 2px solid rgb(253, 210, 15) ;
       text-shadow: rgb(253, 210, 15) 0 10px 20px -10px
   }
+ 
+  
 
+  /* night mode end  */
+
+
+  /* utility classes start  */
 
   .bl-0 {
     border-left: 0;
