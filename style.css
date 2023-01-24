@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar start */
+
+nav {
+  background-color: #191930;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 5px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+
+.fa-sun {
+  font-size: 1px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content > i {
+  font-size: 44px;
+  transition: all 0.2s ease-in;
+}
+/* custom checkbox*/
+.switch {
+  position: relative;
+  display: block;
+  height: 20px;
+  width: 44px;
+  background: #303030;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.switch:after {
+  position: absolute;
+  left: -2px;
+  top: -3px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+  content: "";
+  transition: all 0.3s ease;
+}
+.switch:active:after {
+  transform: scale(1.15, 0.85);
+}
+.cbx:checked ~ label {
+  background: #ffbc04;
+}
+.cbx:checked ~ label:after {
+  left: 20px;
+  background: #ffffff;
+}
+.cbx:disabled ~ label {
+  background: #d5d5d5;
+  pointer-events: none;
+}
+.cbx:disabled ~ label:after {
+  background: #bcbdbc;
+}
+.hidden {
+  display: none;
+}
+
+/* navbar end */
+
+/* main container start */
+
+.container {
+  display: flex;
+  
+  justify-content: center;
+  margin: 40px;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 20vh);
+  grid-template-rows: repeat(3, 20vh);
+}
+
+.box {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5858fc;
+  font-family: "Orbitron", Verdana, sans-serif;
+  font-size: 2.2em;
+  background: none;
+}
+
+.box:hover {
+  color: #6c88e4;
+  cursor: pointer;
+  background-color: rgba(60, 57, 243, 0.096);
+}
+
+.boxtext {
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+
+
+/********************/
+
+@-webkit-keyframes pulseText {
+  0% {
+    text-shadow: 0px 0px 8px #5858fc;
+  }
+  100% {
+    text-shadow: 0px 0px 22px #5858fc;
+  }
+}
+@-moz-keyframes pulseText {
+  0% {
+    text-shadow: 0px 0px 8px #5858fc;
+  }
+  100% {
+    text-shadow: 0px 0px 22px #5858fc;
+  }
+}
+@-o-keyframes pulseText {
+  0% {
+    text-shadow: 0px 0px 8px #5858fc;
+  }
+  100% {
+    text-shadow: 0px 0px 22px #5858fc;
+  }
+}
+@keyframes pulseText {
+  0% {
+    text-shadow: 0px 0px 8px #5858fc;
+  }
+  100% {
+    text-shadow: 0px 0px 22px #5858fc;
+  }
+}
+
+.pulseText {
+  -webkit-animation-name: pulseText;
+  -moz-animation-name: pulseText;
+  -o-animation-name: pulseText;
+  animation-name: pulseText;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  border: 2px solid black;
+}
+
+/***********************************************************/
+
+
+
+
+
+/* info container start */
+
+.info-container {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  margin: 10px;
+  font-family: sans-serif;
+}
+
+.welcome {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #5e5df0;
+  }
+}
+
+.info {
+  font-family: sans-serif;
+  font-size: 2rem;
+  
+}
+
+
+.reset {
+    margin: 5px 10px ;
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  
+  
+
+}
+
+
+.imgbox img{
+    
+    position: absolute;
+    top:41%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    transition: width 1s ease-in-out;;
+    /* transition: width 1s ease-in; */
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #4b4bf7;
+    transition: width 1s ease-in-out;
+}
+
+
+.footer-title{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    transform: translate(-50%, -1%);
+    font-family: sans-serif;
+    font-size: 4vw;
+    font-weight: 100;
+    width: 70vw;
+    text-align: center;
+   
+}
+
+
+
+@media screen and (max-width: 950px)
+{
+    .container{
+        flex-wrap: wrap;
+    }
+    .welcome{
+        margin-top: 34px;
+        font-size: 12px;
+    }
+    .information{
+        text-align: center;
+    }
+    .info{
+        font-size: 2rem;
+    }
+    .game-container { 
+        grid-template-rows: repeat(3, 27vw);
+        grid-template-columns: repeat(3, 27vw);
+    }
+    .reset{
+        display: block;
+        margin: 30px 50px;
+    }
+}
+
+
+
+/* night mode  */
+
+.night {
+    background-color: #000000;
+    color: rgb(253, 210, 15);
+    
+  }
+  
+  .night-title{
+      color: rgb(253, 210, 15);
+      text-shadow: 1px 1px rgba(245, 201, 8, 0.637);
+  
+  }
+  
+  .night-border{
+      border: 2px solid rgb(253, 210, 15) ;
+      text-shadow: rgb(253, 210, 15) 0 10px 20px -10px
+  }
+
+
+  .bl-0 {
+    border-left: 0;
+  }
+  .br-0 {
+    border-right: 0;
+  }
+  .bt-0 {
+    border-top: 0;
+  }
+  .bb-0 {
+    border-bottom: 0;
+  }
