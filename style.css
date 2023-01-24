@@ -281,7 +281,7 @@ nav li {
     transform: translate(-50%, -50%);
     width: 0px;
     transition: width 1s ease-in-out;;
-    /* transition: width 1s ease-in; */
+    
 }
 
 .line{
@@ -300,7 +300,7 @@ nav li {
     left:50%;
     transform: translate(-50%, -1%);
     font-family: sans-serif;
-    font-size: 4vw;
+    font-size: 1rem;
     font-weight: 100;
     width: 70vw;
     text-align: center;

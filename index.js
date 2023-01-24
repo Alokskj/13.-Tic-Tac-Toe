@@ -5,6 +5,7 @@ let audioTurn = new Audio("ting.mp3")
 let gameover = new Audio("gameover.mp3")
 let turn = "X"
 let isgameover = false;
+let click = 0;
 
 // funtion to change turn 
 
@@ -19,6 +20,7 @@ document.querySelector(".reset").addEventListener('click', function reseting (){
         element.innerText = ""
     });
     turn = "X"; 
+    click = 0;
     isgameover = false
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
 })
@@ -61,9 +63,11 @@ Array.from(boxes).forEach(element =>{
             turn = changeTurn();
             audioTurn.play();
             checkWin();
+            click++
+            if(click === 9 & isgameover === false){
+                gameover.play();
+            }
             
-            if (!isgameover){
-            } 
         }
     })
 })
